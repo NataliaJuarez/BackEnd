@@ -19,25 +19,31 @@ public class Persona implements Serializable {
     private String nombre;
     private String apellido;
     private String profesion;
-    private String ciudad;
-    private String pais;
+    private String fotoperfil;
+    private String imagenbanner;
     private String about;
-    private String imagendeperfil;
-    
-    public Persona() {        
+    private String ciudad;
+    private String provincia;
+    private String pais;
+    private String mail;
+    private String redsocial;
+
+    public Persona() {
     }
 
-    public Persona(Long id, String nombre, String apellido, String profesion, String ciudad, String pais, String about, String imagendeperfil) {
+    public Persona(Long id, String nombre, String apellido, String profesion, String fotoperfil, String imagenbanner, String about, String ciudad, String provincia, String pais, String mail, String redsocial) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.profesion = profesion;
-        this.ciudad = ciudad;
-        this.pais = pais;
+        this.fotoperfil = fotoperfil;
+        this.imagenbanner = imagenbanner;
         this.about = about;
-        this.imagendeperfil = imagendeperfil;
+        this.ciudad = ciudad;
+        this.provincia = provincia;
+        this.pais = pais;
+        this.mail = mail;
+        this.redsocial = redsocial;
     }
-    
-
     
 }

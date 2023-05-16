@@ -18,16 +18,20 @@ public class Educacion implements Serializable {
     
     private String establecimiento;
     private String titulo;
-    private Long anio; //long o date?
+    private Long anio1;
+    private Long anio2;
+    private String logo;
 
     public Educacion() {
     }
 
-    public Educacion(Long id, String establecimiento, String titulo, Long anio) {
+    public Educacion(Long id, String establecimiento, String titulo, Long anio1, Long anio2, String logo) {
         this.id = id;
         this.establecimiento = establecimiento;
         this.titulo = titulo;
-        this.anio = anio;
+        this.anio1 = anio1;
+        this.anio2 = anio2;
+        this.logo = logo;
     }
     
     

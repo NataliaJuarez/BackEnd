@@ -16,9 +16,10 @@ public class Habilidades implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     
     private Long id;
-    private String nombre; //nombre de la habilidad??? java, javascript, html, etc
-    private String nivel; // nivel tipo principiante, intermedio, avanzado o long para porcentaje??
+    private String nombre; 
+    private String nivel; // string tipo principiante, intermedio, avanzado o long para porcentaje??
 
+    //tendría que crear más clases para hacer por separado HS (front/back) y SS??  
     public Habilidades() {
     }
 
@@ -26,7 +27,6 @@ public class Habilidades implements Serializable {
         this.id = id;
         this.nombre = nombre;
         this.nivel = nivel;
-    }
-    
+    }    
     
 }
