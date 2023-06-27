@@ -26,12 +26,13 @@ public class Persona implements Serializable {
     private String provincia;
     private String pais;
     private String mail;
-    private String redsocial;
+    private String github;
+    private String linkedin;
 
     public Persona() {
     }
 
-    public Persona(Long id, String nombre, String apellido, String profesion, String fotoperfil, String imagenbanner, String about, String ciudad, String provincia, String pais, String mail, String redsocial) {
+    public Persona(Long id, String nombre, String apellido, String profesion, String fotoperfil, String imagenbanner, String about, String ciudad, String provincia, String pais, String mail, String github, String linkedin) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -43,7 +44,10 @@ public class Persona implements Serializable {
         this.provincia = provincia;
         this.pais = pais;
         this.mail = mail;
-        this.redsocial = redsocial;
+        this.github = github;
+        this.linkedin = linkedin;
     }
+
+    
     
 }

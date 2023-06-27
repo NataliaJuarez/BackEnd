@@ -17,19 +17,19 @@ public class Proyectos implements Serializable {
     private Long id;
     private String nombre;
     private String imagenproyecto;
-    private String descripcion;
+    private String github;
+    private String url;      
 
     public Proyectos() {
     }
 
-    public Proyectos(Long id, String nombre, String imagenproyecto, String descripcion) {
+    public Proyectos(Long id, String nombre, String imagenproyecto, String github, String url) {
         this.id = id;
         this.nombre = nombre;
         this.imagenproyecto = imagenproyecto;
-        this.descripcion = descripcion;
+        this.github = github;
+        this.url = url;
     }
-
-
     
     
 }
