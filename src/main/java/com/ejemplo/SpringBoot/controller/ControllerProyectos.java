@@ -32,6 +32,11 @@ public class ControllerProyectos {
         return proyeService.verProyectos();
     }
     
+    @GetMapping ("/proyectos/buscar/{id}")
+    public void buscarProyecto (@PathVariable Long id) {
+        proyeService.buscarProyecto(id);
+    }
+        
     @DeleteMapping ("/proyecto/delete/{id}")
     public void eliminarProyecto (@PathVariable Long id) {
         proyeService.eliminarProyecto(id);

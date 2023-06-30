@@ -32,6 +32,11 @@ public class ControllerEducacion {
         return eduService.verEducacion();    
     }
     
+    @GetMapping ("/educacion/buscar/{id}")
+    public void buscarEducacion (@PathVariable Long id) {
+        eduService.buscarEducacion(id);
+    }
+    
     @DeleteMapping ("/educacion/delete/{id}")
     public void eliminarEducacion (@PathVariable Long id) {
         eduService.eliminarEducacion(id);

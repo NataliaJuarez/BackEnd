@@ -32,6 +32,11 @@ public class ControllerHabilidadesFront {
         return habiService.verHabilidades();
     }
     
+    @GetMapping ("/habilidad/buscar/{id}")
+    public void buscarHabilidad (@PathVariable Long id) {
+        habiService.buscarHabilidad(id);
+    }
+    
     @DeleteMapping ("/habilidad/delete/{id}")
     public void eliminarHabilidad (@PathVariable Long id) {
         habiService.eliminarHabilidad(id);

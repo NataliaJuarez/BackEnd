@@ -33,6 +33,11 @@ public class ControllerExperiencia {
         return expeService.verExperiencias();
     }
     
+    @GetMapping ("/experiencia/buscar/{id}")
+    public void buscarExperiencia (@PathVariable Long id) {
+        expeService.buscarExperiencia(id);
+    }
+    
     @DeleteMapping ("/experiencia/delete/{id}")
     public void eliminarExperiencia (@PathVariable Long id) {
         expeService.eliminarExperiencia(id);

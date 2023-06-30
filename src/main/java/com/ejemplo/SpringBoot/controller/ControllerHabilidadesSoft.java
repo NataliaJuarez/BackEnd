@@ -32,6 +32,11 @@ public class ControllerHabilidadesSoft {
         return habiSService.verHabilidades();
     }
     
+    @GetMapping ("/shabilidad/buscar/{id}") 
+    public void buscarHabilidad (@PathVariable Long id) {
+        habiSService.buscarHabilidad(id);
+    }
+    
     @DeleteMapping ("/shabilidad/delete/{id}")
     public void eliminarHabilidad (@PathVariable Long id) {
         habiSService.eliminarHabilidad(id);
