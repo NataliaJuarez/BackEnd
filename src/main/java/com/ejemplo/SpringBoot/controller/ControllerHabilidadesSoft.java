@@ -21,24 +21,24 @@ public class ControllerHabilidadesSoft {
     @Autowired
     public HabilidadesSoftService habiSService;
     
-    @PostMapping ("/new/shabilidad")
+    @PostMapping ("/shabilidad/new")
     public void agregarHabilidad (@RequestBody HabilidadesSoft habiS) {
        habiSService.crearHabilidad(habiS);
     }
     
-    @GetMapping ("/ver/shabilidades")
+    @GetMapping ("/shabilidades/ver")
     @ResponseBody
     public List<HabilidadesSoft> verHabilidades () {
         return habiSService.verHabilidades();
     }
     
-    @DeleteMapping ("/delete/shabilidad/{id}")
+    @DeleteMapping ("/shabilidad/delete/{id}")
     public void eliminarHabilidad (@PathVariable Long id) {
         habiSService.eliminarHabilidad(id);
     }
     
-    @PutMapping ("/edit/shabilidad")
-    public void editarHabilidad (@RequestBody HabilidadesSoft habiS) {
+    @PutMapping ("/shabilidad/edit/{id}")
+    public void editarHabilidad (@PathVariable Long id, @RequestBody HabilidadesSoft habiS) {
         habiSService.editarHabilidad(habiS);
     }
     

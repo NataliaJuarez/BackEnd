@@ -21,21 +21,20 @@ public class ControllerMensajes {
     @Autowired
     public MensajesService msjService;
     
-    @PostMapping ("/new/mensaje")
+    @PostMapping ("/mensaje/new")
     public void enviarMensaje (@RequestBody Mensajes msj) {
-       // listaPersonas.add(pers); 
        msjService.crearMensaje(msj);
     }
     
     @PreAuthorize("hasRole('ADMIN')")
-    @GetMapping ("/ver/mensajes")
+    @GetMapping ("/mensajes/ver")
     @ResponseBody
     public List<Mensajes> verMensajes () {
         return msjService.verMensajes();
     }
     
     @PreAuthorize("hasRole('ADMIN')")    
-    @DeleteMapping ("/delete/mensaje/{id}")
+    @DeleteMapping ("/mensaje/delete/{id}")
     public void eliminarMensaje (@PathVariable Long id) {
         msjService.eliminarMensaje(id);
     }

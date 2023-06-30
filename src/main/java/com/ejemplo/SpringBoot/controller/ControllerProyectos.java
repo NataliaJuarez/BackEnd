@@ -21,23 +21,23 @@ public class ControllerProyectos {
     @Autowired
     public ProyectosService proyeService;
     
-    @PostMapping ("/new/proyecto")
+    @PostMapping ("/proyecto/new")
     public void agregarProyecto (@RequestBody Proyectos proye) { 
        proyeService.crearProyecto(proye);
     }
     
-    @GetMapping ("/ver/proyectos")
+    @GetMapping ("/proyectos/ver")
     @ResponseBody
     public List<Proyectos> verProyectos () {
         return proyeService.verProyectos();
     }
     
-    @DeleteMapping ("/delete/proyecto/{id}")
+    @DeleteMapping ("/proyecto/delete/{id}")
     public void eliminarProyecto (@PathVariable Long id) {
         proyeService.eliminarProyecto(id);
     }
-    @PutMapping ("/edit/proyecto")
-    public void editarProyecto (@RequestBody Proyectos proye) {
+    @PutMapping ("/proyecto/edit/{id}")
+    public void editarProyecto (@PathVariable Long id, @RequestBody Proyectos proye) {
         proyeService.editarProyecto(proye);
     }
 }

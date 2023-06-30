@@ -34,15 +34,9 @@ public class ControllerPersona {
     public List<Persona> verPersonas () {
         return persoService.verPersonas();
     }
-    
+        
     @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping ("/delete/{id}")
-    public void eliminarPersona (@PathVariable Long id) {
-        persoService.eliminarPersona(id);
-    }
-    
-    @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping ("/edit/persona")
+    @PutMapping ("/persona/edit")
     public void editarPersona (@RequestBody Persona pers) {
         persoService.editarPersona(pers);
     }

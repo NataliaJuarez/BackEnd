@@ -21,25 +21,25 @@ public class ControllerExperiencia {
     @Autowired
     public ExperienciaService expeService;
     
-        @PostMapping ("/new/experiencia")
+        @PostMapping ("/experiencia/new")
     public void agregarExperiencia (@RequestBody Experiencia expe) {
        // listaExperiencias.add(expe); 
        expeService.crearExperiencia(expe);
     }
     
-    @GetMapping ("/ver/experiencia")
+    @GetMapping ("/experiencia/ver")
     @ResponseBody
     public List<Experiencia> verExperiencias () {
         return expeService.verExperiencias();
     }
     
-    @DeleteMapping ("/delete/experiencia/{id}")
+    @DeleteMapping ("/experiencia/delete/{id}")
     public void eliminarExperiencia (@PathVariable Long id) {
         expeService.eliminarExperiencia(id);
     }
     
-    @PutMapping ("/edit/experiencia")
-    public void editarExperiencia (@RequestBody Experiencia expe) {
+    @PutMapping ("/experiencia/edit/{id}")
+    public void editarExperiencia (@PathVariable Long id, @RequestBody Experiencia expe) {
         expeService.editarExperiencia(expe);
     }
     
